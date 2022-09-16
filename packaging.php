@@ -6,68 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Packaging</title>
-    <link rel="stylesheet" href="./sass/style.css">
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <?php include('./header_footer/link.php') ?>
 </head>
+
 <body>
-<div id="overlayer"></div>
-  <div class="preloader">
-    <div class="loader">
-      <svg viewBox="-2000 -1000 4000 2000" class="preloader__hoover">
-        <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
-        <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
-      </svg>
+    <div id="overlayer"></div>
+    <div class="preloader">
+        <div class="loader">
+            <svg viewBox="-2000 -1000 4000 2000" class="preloader__hoover">
+                <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+                <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
+            </svg>
+        </div>
     </div>
-  </div>
     <?php include('./header_footer/header.php') ?>
     <div class="packaging_page container">
-        <div class="hero_banner packaging_banner ">
+        <div class="hero_banner packaging_banner">
             <div class="sub_packaging_title">
-                <h1 class="title">
-                    Sustainable <br>packaging
-                </h1>
+                <div class="flex">
+                    <h1 class="title">
+                        Sustainable <br>packaging
+                    </h1>
+                    <div class="pack_img">
+                        <img src="./image/packaging__banner.png" alt="rightbannerf">
+                    </div>
+                </div>
                 <p class="title_packaging">
                     In a world of increasing demand for sustainable solutions, Hoover CS is here to guide you from wasteful single-use packaging to one of circularity. When you shift to sustainable packaging, you demonstrate your commitment to making an impact for good by optimizing your company’s environmental footprint through shrinking greenhouse gas emissions, conserving water, and reducing plastics usage. Whether you need IBCs for chemicals or solids, Catalyst Bins for fresh or spent catalyst, or ISO Tanks for bulk chemicals, we provide practical alternatives to single-use packaging, ensuring you stay on the leading edge of sustainability.
                 </p>
             </div>
         </div>
-        <section class="envorment_impact">
-            <h3>Ready to Reduce your Environmental Impact?</h3>
-            <p class="pb25">Using our calculator below, answer a single question to understand how switching from single-use to Hoover CS reusable IBCs benefit the environment.
-            </p>
-            <p class="pb25"><strong>Select one question below.</strong></p>
-            <div class="btn-packing pb25">
-                <a href="#" class="chemical text-center vis">How many gallons of chemicals do you ship annually?</a>
-                <a href="#" class="chemical text-center">How many gallons of chemicals do you ship annually?</a>
-                <a href="#" class="chemical text-center">How many single-use IBCs do you utilize per year?</a>
-                <a href="#" class="chemical text-center vis">How many single-use IBCs do you utilize per year?</a>
-            </div>
-        </section>
+        <p class="text-center">CEO</p>
+        <h4 class="text-center">Kevin Friar</h4>
+        <p class="text-center mw534">
+            “We’re making it easy for customers to make a more environmentally sound choice and we are supporting them in articulating what that means in the context of their sustainability goals.”
+        </p>
+    </div>
 
-        <section class="icon">
-            <div class="main_icon">
-                <h5 class="text-center">Positive Effects
-                    <br> for the Planet
-                </h5>
-                <p >This is equivalent to carbon sequestered by</p>
-                <div class="plant_tree flex">
-                    <div class="box_icon plant">
-                        <p class="icon_title
-                    ">Tree seedlings grown for 10 years</p>
-                        <div class="box_icon_bg">
-                            <h4 class="green-text">0</h4>
-                        </div>
-                        
-                    </div>
-                    <div class="box_icon tree">
-                        <p>Tree seedlings grown for 10 years</p>
-                        <div class="box_icon_bg">
-                            <h4 class="green-text">0</h4>
-                        </div>
+    <div class="Transform__section container flex">
+        <div class="col6 transform__desc">
+            <h4>Transformation Starts Here</h4>
+            <p>We recognize supply chains are complex and it might be complicated to transform it in a sustainable way but our ability to manage that transformation in a simple and uncomplicated way is why leading companies choose us. Teaming up with Hoover CS is win/win/win for your business, your customers, and our environment. So, let us do what we do best: transform your supply chain to meet company sustainability goals while safely, cost-effectively, and sustainably storing your products. </p>
+            <a href="" class="default-btn-opposite">Request More Information</a>
+        </div>
+        <div class="col2">
+            <div class="image_case_study">
+                <div class="case__img">
+                    <img src="./image/case-study-1.png" alt="case__study1">
+                </div>
+                <div class="blue_bg">
+                    <h6>Case Study</h6>
+                    <p>Placeholder for story about how Hoover CS has helped transform XYZ company create circularity within their supply chain. </p>
+
+                    <div class="case__btn">
+                        <a href="#" class="default-btn">Learn More</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="col2">
+            <div class="image_case_study">
+                <div class="case__img">
+                    <img src="./image/case-study-2.png" alt="case__study1">
+                </div>
+                <div class="green_bg">
+                    <h6>Case Study</h6>
+                    <p>Placeholder for story about how Hoover CS has helped transform XYZ company create circularity within their supply chain. </p>
+
+                    <div class="case__btn">
+                        <a href="#" class="default-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <?php include('./header_footer/footer_notification.php') ?>
     <?php include('./header_footer/footer.php') ?>

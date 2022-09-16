@@ -30,7 +30,7 @@
   font-display: swap;
 }
 
-* {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -236,6 +236,10 @@ p {
   width: 33%;
 }
 
+.col2 {
+  width: 24%;
+}
+
 ::-webkit-input-placeholder {
   color: #13216a;
   opacity: 1;
@@ -288,6 +292,33 @@ select:focus-visible {
   background-color: #f2f2f2;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
+}
+
+.default-btn-opposite {
+  color: #13216a;
+  border-color: #fff;
+  background-color: #f2f2f2;
+  min-width: 177px;
+  margin-right: 25px;
+  border: 2px solid;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 20px;
+  height: 50px;
+  line-height: 46px;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.default-btn-opposite:hover {
+  color: #fff;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  background-color: #13216a;
 }
 
 .talk-btn a {
@@ -1965,6 +1996,10 @@ footer .lower_footer .l_links .f-link a {
   padding: 169px 0 0 85px;
 }
 
+.packaging_page .packaging_banner .sub_packaging_title .pack_img {
+  padding-right: 50px;
+}
+
 .packaging_page .packaging_banner .title_packaging {
   color: #fff;
   max-width: 1230px;
@@ -1984,86 +2019,94 @@ footer .lower_footer .l_links .f-link a {
   visibility: hidden;
 }
 
-.packaging_page section.envorment_impact p:nth-child(1) {
-  display: none;
-}
-
-.packaging_page section.envorment_impact h3 {
-  font-size: 58px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  margin-bottom: 61px;
-  text-align: center;
+.packaging_page h4 {
   color: #13216a;
-  margin-top: 85px;
+  font-size: 22px;
+  padding: 10px 0 25px 0;
 }
 
-.packaging_page section.envorment_impact p {
-  line-height: 30px;
-  width: 770px;
-  margin: auto;
-  text-align: center;
+.packaging_page .packaging_banner + p {
+  font-size: 13px;
+  color: #13216a;
+  padding: 10px 0;
 }
 
-.packaging_page section.envorment_impact pstrong {
-  padding-bottom: 30px;
+.Transform__section {
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  padding: 50px 20px;
 }
 
-.packaging_page section.envorment_impact .btn-packing {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.Transform__section .transform__desc {
+  border-radius: 5px;
+  background: transparent;
+  border: 3px solid #13216a;
+  position: relative;
 }
 
-.packaging_page section.envorment_impact a.chemical {
-  max-width: 330px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  color: #fff;
-  border-radius: 10px;
-  background-color: #13216a;
-  padding: 20px;
-  font-family: "Hurme Geometric Sans 3";
-}
-
-.packaging_page section.envorment_impact a.chemical:hover {
-  background-color: #74bc1f;
-}
-
-.packaging_page section.icon {
-  max-width: 75%;
-  margin: 0 auto;
-}
-
-.packaging_page section.icon .main_icon {
-  width: 50%;
-}
-
-.packaging_page section.icon .main_icon .plant_tree .box_icon_bg {
-  background-image: url("../image/TreeSeedling.svg") no-repeat;
-  background: url(../image/TreeSeedling.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 120px;
-}
-
-.packaging_page section.icon .main_icon .plant_tree .plant,
-.packaging_page section.icon .main_icon .plant_tree .tree {
-  background-color: #f2f2f2;
-}
-
-.packaging_page .icon_title {
-  color: #373737;
-  padding-bottom: 20px;
-  text-align: center;
+.Transform__section .transform__desc h4 {
+  padding: 80px 0 0 50px;
   font-weight: 600;
-  font-size: 0.8em;
-  height: 71px;
+  font-size: 38px;
+  letter-spacing: -0.03em;
+  line-height: 50px;
+  text-align: left;
+  color: #13216a;
+}
+
+.Transform__section .transform__desc p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+  color: #13216a;
+  padding: 35px 0 0 50px;
+}
+
+.Transform__section .transform__desc a {
+  position: absolute;
+  bottom: 15px;
+  left: 50px;
+}
+
+.image_case_study img {
+  width: 100%;
+}
+
+.image_case_study .blue_bg {
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#13216a), to(#3549b2));
+  background: linear-gradient(#13216a 0%, #3549b2 100%);
+}
+
+.image_case_study .green_bg {
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4db359), to(#357204));
+  background: linear-gradient(#4db359 0%, #357204 100%);
+}
+
+.image_case_study h6 {
+  font-weight: 600;
+  font-size: 33px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #fff;
+  padding: 50px 0 35px 30px;
+}
+
+.image_case_study p {
+  font-family: "Hurme Geometric Sans 3";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #fff;
+  padding: 35px 35px;
+}
+
+.image_case_study .case__btn {
+  padding: 25px;
 }
 
 .homepage {
@@ -2078,7 +2121,6 @@ footer .lower_footer .l_links .f-link a {
 }
 
 .homepage h1 {
-  font-family: "HurmeGeometricSans3";
   font-size: 80px;
   color: #fff;
   font-weight: 600;
@@ -2223,7 +2265,6 @@ footer .lower_footer .l_links .f-link a {
 }
 
 .track_homepage h2.title {
-  font-family: "Hurme Geometric Sans 3";
   font-weight: normal;
   font-size: 33px;
   letter-spacing: -0.03em;
@@ -2233,7 +2274,6 @@ footer .lower_footer .l_links .f-link a {
 }
 
 .track_homepage p.heading {
-  font-family: "Hurme Geometric Sans 3";
   font-weight: bold;
   font-size: 66px;
   letter-spacing: -0.03em;
@@ -2274,6 +2314,12 @@ svg.preloader__hoover {
   stroke: #13216a;
   stroke-linecap: round;
   stroke-width: 8%;
+}
+
+@media all and (max-width: 767px) {
+  svg.preloader__hoover {
+    height: 100vh;
+  }
 }
 
 use {
