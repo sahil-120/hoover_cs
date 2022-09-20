@@ -9,16 +9,16 @@
     <?php include('./header_footer/link.php') ?>
 </head>
 
-<body>
-<div id="overlayer"></div>
-  <div class="preloader">
-    <div class="loader">
-      <svg viewBox="-2000 -1000 4000 2000" class="preloader__hoover">
-        <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
-        <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
-      </svg>
+<body class="indrusties_page">
+    <div id="overlayer"></div>
+    <div class="preloader">
+        <div class="loader">
+            <svg viewBox="-2000 -1000 4000 2000" class="preloader__hoover">
+                <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+                <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
+            </svg>
+        </div>
     </div>
-  </div>
     <?php include('./header_footer/header.php') ?>
     <div class="container ind-banner">
         <p class="ss"><a href="#">Home/Industries</a></p>
@@ -46,7 +46,7 @@
     </div>
     <div class="container third_img flex">
         <div class="left">
-            <img src="./image/big-store.png" alt="" loading="lazy">
+            <div class="img_div"><img src="./image/big-store.png" alt="" loading="lazy"></div>
         </div>
         <div class="right">
             <h2 class="titl">Refining & Petrochemical</h2>
@@ -77,13 +77,12 @@
             </p>
         </div>
         <div class="right">
-            <img src="./image/paintgas.png" alt="" loading="lazy">
-            <img src="./image/paintgas.png" alt="" loading="lazy">
+            <div class="img_div"><img src="./image/paintgas.png" alt="" loading="lazy"></div>
         </div>
     </div>
     <div class="container second_img fifth_img flex">
         <div class="right">
-            <img src="./image/pharmaceutical_industry.png" alt="">
+            <div class="img_div"><img src="./image/pharmaceutical_industry.png" alt=""></div>
         </div>
         <div class="left">
             <h2 class="titl">Pharmaceutical & Cosmetic</h2>
@@ -98,7 +97,7 @@
             </p>
         </div>
         <div class="right">
-            <img src="./image/food_and_beverage.png" alt="">
+            <div class="img_div"><img src="./image/food_and_beverage.png" alt=""></div>
         </div>
     </div>
     <?php include('./header_footer/footer_notification.php') ?>

@@ -80,6 +80,20 @@
             </div>
         </div>
     </div>
+    <div class="container homepage__goal__section packaging_section flex">
+        <div class="goal__about col6">
+            <h3 class="content-title">Create Circularity In Your <br>
+                Packaging Strategy</h3>
+            <p>Working with Hoover CS is a commitment to circularity. We serve you from start, through delivery and for the future, by safely and sustainably packaging your product or raw material in reusable containers. We control the logistics by providing fleet management and container reconditioning to make the process easy for you and positive for the environment.
+                <br><br> By choosing Hoover CS services and solutions, you’ll be raising the bar for packaging sustainability in your industry. You’ll set the example of circularity – and that will give you the desired position of leadership.
+            </p>
+        </div>
+        <div class="goal__img col6">
+            <div class="goal__img--image">
+                <img src="./image/packaging_img.png" alt="goal img">
+            </div>
+        </div>
+    </div>
     <?php include('./header_footer/footer_notification.php') ?>
     <?php include('./header_footer/footer.php') ?>
     <script src="./js/app.js"></script>
