@@ -20,8 +20,8 @@
         </div>
     </div>
     <?php include('./header_footer/header.php') ?>
-    <div class="container ind-banner">
-        <p class="ss"><a href="#">Home/Industries</a></p>
+    <div class="container ind__banner">
+        <p class="ind__banner__desc"><a href="#">Home/Industries</a></p>
         <h1>Industries</h1>
         <p class="banner-descr">Hoover CS is the leading circular packaging provider for a wide range of customers within the chemical, refining, and general industrial markets looking to increase their sustainability profiles through greater participation in circular supply chains. Leverage our chemical packaging and logistics expertise and make a commitment for the good of your business – and our environment.</p>
         <p class="ind_btn">
@@ -33,23 +33,23 @@
         </p>
     </div>
     <div class="container second_img flex">
-        <div class="left">
+        <div class="left col6">
             <h2 class="titl">Industrial Chemicals</h2>
             <p>Industrial chemical companies of all kinds are reaping the environmental and business benefits of circular packaging in their supply chains with Hoover CS’s selection of stainless-steel IBCs and ISO tanks. From specialty and production chemicals to polymers, organic, and life-sciences chemicals, we provide the most reliable handling, storage, and delivery solutions in the industry. Not only did we pioneer the original IBC of the chemical handling industry, but we have continued to adapt and grow, now offering a range of sizes and specialty tanks such as Cargo Valve Tanks with enhanced fire safety for the production chemicals market.
                 <br><br><br>
                 Our fleet of 20-foot ISO Bulk Delivery Units on chassis available with innovative oilfield modifications and outfitted with cutting-edge technology are perfect for meeting the increased demand for the intermodal transportation, storage, and last-mile wellsite delivery of completion and stimulation chemicals.
             </p>
         </div>
-        <div class="right">
+        <div class="right col6">
             <img src="./image/chemical_plant.png" alt="" loading="lazy">
         </div>
     </div>
     <div class="container third_img flex">
-        <div class="left">
+        <div class="left col6">
             <div class="img_div"><img src="./image/big-store.png" alt="" loading="lazy"></div>
         </div>
-        <div class="right">
-            <h2 class="titl">Refining & Petrochemical</h2>
+        <div class="right col6">
+            <h2 class="ind__desc__title">Refining & Petrochemical</h2>
             <p>Bring sustainability into your supply chain by harnessing Hoover CS’s reusable catalyst packaging solutions. As the largest global supplier of Catalyst Bins, Hoover CS is truly the industry standard for the storage, handling, and transportation of fresh, spent, and presulfided catalysts.
                 <br><br>
                 Our rental fleet of Catalyst Bins are UN-11AX approved, hermetically sealed, and designed to prevent leakage and spills. To withstand hazardous waste, we build our Catalyst Bins with high quality carbon and stainless-steel, prioritizing container integrity and quality. We also offer reusable liquid IBCs and ISO tanks suitable for the needs of refineries and petrochemical companies.
@@ -76,27 +76,27 @@
                 Understanding the unique challenges of storing paint, Hoover CS not only stores your product but can also protect the integrity of tanks through our wash services, including interior and exterior cleanings.
             </p>
         </div>
-        <div class="right">
+        <div class="right col6">
             <div class="img_div"><img src="./image/paintgas.png" alt="" loading="lazy"></div>
         </div>
     </div>
     <div class="container second_img fifth_img flex">
-        <div class="right">
+        <div class="right col6">
             <div class="img_div"><img src="./image/pharmaceutical_industry.png" alt=""></div>
         </div>
-        <div class="left">
+        <div class="left col6">
             <h2 class="titl">Pharmaceutical & Cosmetic</h2>
             <p>Hoover CS helps businesses in the pharmaceutical and cosmetics industries to augment the eco-friendliness of their supply chains with sustainable packaging. Let us amplify your efforts and show you how to achieve your sustainable development goals by reducing your carbon footprint, transitioning to reusable IBCs in a circular supply chain, and minimizing reliance on single-use plastic packaging.
             </p>
         </div>
     </div>
     <div class="container second_img fourth_img flex">
-        <div class="left">
+        <div class="left col6">
             <h2 class="titl">Food & Beverage</h2>
             <p>Hoover CS supplies high-quality, food-grade IBCs for all kinds of foods, beverages, spices, oils, flavorings, dyes, ingredients, seasonings, and chemical additives. We additionally provide cleaning and sanitation services, transportation and logistics support, and extras like tech offerings and cooling jackets to maintain freshness and efficient yield.
             </p>
         </div>
-        <div class="right">
+        <div class="right col6">
             <div class="img_div"><img src="./image/food_and_beverage.png" alt=""></div>
         </div>
     </div>

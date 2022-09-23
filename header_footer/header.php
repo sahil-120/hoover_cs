@@ -11,11 +11,11 @@
         <div class="navigation">
             <ul>
                 <li><a href="./rental.php">rentails</a></li>
-                <li><a href="./location.php">services</a></li>
-                <li><a href="#">fleet management</a></li>
+                <li><a href="">services</a></li>
+                <li><a href="">fleet management</a></li>
                 <li><a href="./packaging.php">Sustainable Packaging</a></li>
                 <li><a href="./resouces.php">Resources</a></li>
-                <li><a href="./ind.php">Contact</a></li>
+                <li><a href="./contact.php">Contact</a></li>
             </ul>
         </div>
         <div class="search">

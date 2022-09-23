@@ -7,7 +7,7 @@
             <div class="quick_links flex">
                 <div class="about ql_footer">
                     <ul>
-                        <li><a class="title_ql" href="#">About</a></li>
+                        <li><a class="title_ql" href="./aboutus.php">About</a></li>
                         <li><a href="#">Our Culture</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">News & Announcement</a></li>
@@ -33,7 +33,7 @@
 
                 <div class="about ql_footer">
                     <ul>
-                        <li><a class="title_ql" href="#">Industries</a></li>
+                        <li><a class="title_ql" href="./ind.php">Industries</a></li>
                         <li><a href="#">Base & Specialty Chemicals</a></li>
                         <li><a href="#">Industrial Coatings & Paint</a></li>
                         <li><a href="#">Refining & Petrochemical</a></li>
@@ -44,8 +44,8 @@
 
                 <div class="about ql_footer">
                     <ul>
-                        <li><a class="title_ql" href="#">Contact</a></li>
-                        <li><a href="#">Locations</a></li>
+                        <li><a class="title_ql" href="./contact.php">Contact</a></li>
+                        <li><a href="./location.php">Locations</a></li>
                         <li><a href="#">800.123.1234</a></li>
                     </ul>
                 </div>

@@ -348,6 +348,10 @@ select {
   &:focus-visible {
     outline: 0;
   }
+
+  option {
+    color: $default;
+  }
 }
 
 .default-btn {
@@ -526,6 +530,13 @@ header {
         padding-top: 40px;
       }
 
+      @include bp(max479) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-gap: 20px;
+      }
+
       a {
         border: 2px solid $light;
         border-radius: 5px;
@@ -533,57 +544,67 @@ header {
     }
   }
 
-  .homepage-banner__select-option {
-    position: relative;
-    padding: 0 20px;
-    padding-top: 70px;
-    display: block;
-    width: 100%;
-    max-width: 384px;
+}
+
+.homepage-banner__select-option {
+  position: relative;
+  padding: 0 20px;
+  padding-top: 70px;
+  display: block;
+  width: 100%;
+  max-width: 384px;
+
+  @include bp(max767) {
+    padding-top: 40px;
+  }
+
+  p {
+    padding: 10px 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 54px;
+    height: 52px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 50px;
+    color: #1a2979;
+    pointer-events: none;
+    border-radius: 0 5px 5px 0;
+    background: $light url(../image/icon-select-menu.svg) no-repeat center center;
+    left: 332px;
+    top: 120px;
 
     @include bp(max767) {
-      padding-top: 40px;
+      left: 335px;
+      top: 90px;
     }
+  }
 
-    p {
-      padding: 10px 0;
-    }
+  select {
+    padding: 15px 20px 14px;
+    background: transparent;
+    color: $light;
+    font-size: 18px;
+    border-color: $light;
+    border-radius: 8px;
 
-    &:before {
-      content: "";
-      position: absolute;
-      width: 54px;
-      height: 52px;
-      text-align: center;
-      font-size: 28px;
-      line-height: 50px;
-      color: #1a2979;
-      pointer-events: none;
-      border-radius: 0 5px 5px 0;
-      background: $light url(../image/icon-select-menu.svg) no-repeat center center;
-      left: 332px;
-      top: 120px;
-
-      @include bp(max767) {
-        left: 335px;
-        top: 90px;
-      }
-    }
-
-    select {
-      padding: 15px 20px 14px;
-      background: transparent;
-      color: $light;
-      font-size: 18px;
-      border-color: $light;
-      border-radius: 8px;
-
-      option {
-        color: $default;
-      }
+    option {
+      color: $default;
     }
   }
 }
+.rental__page{
+  .homepage-banner__select-option{
+    &:before{
+      left: 282px;
+    top: 121px;
+    }
+  }
+}
+
 
 .homepage-content {
   .homepage__banner-left-content {
@@ -641,7 +662,8 @@ header {
   }
 }
 
-.have_sectioN {
+
+.have_section {
   padding: 20px 0 10px;
 
   .title__heading {
@@ -1196,7 +1218,7 @@ footer {
 
 // indrusties page
 
-.ind-banner {
+.ind__banner {
   background-color: $smoke-gray;
   padding: 114px 93px 81px;
   border-radius: 0 0 5px 5px;
@@ -1216,7 +1238,7 @@ footer {
   p {
     text-align: left;
 
-    &.ss {
+    &.ind__banner__desc {
       font-size: 11px;
     }
 
@@ -1282,10 +1304,11 @@ footer {
 }
 
 
-.indrusties_page{
-  .img_div{
+.indrusties_page {
+  .img_div {
     width: 100%;
-    img{
+
+    img {
       width: 100%;
     }
   }
@@ -1293,6 +1316,7 @@ footer {
 
 .second_img.flex {
   margin-bottom: 150px;
+
   @include bp(max767) {
     display: block;
     margin-bottom: 25px;
@@ -1352,7 +1376,7 @@ footer {
 }
 
 .indrusties_page {
-  h2.titl {
+  .ind__desc__title {
     @include bp(max767) {
       padding: 25px 0;
     }
@@ -1689,7 +1713,9 @@ footer {
   .tabs {
     display: flex;
     margin-bottom: 75px;
-
+    @include bp(max767){
+      display: block;
+    }
     .tab {
       cursor: pointer;
       padding: 10px 20px;
@@ -1720,6 +1746,9 @@ label#one-tab,
 label#two-tab,
 label#three-tab {
   width: 33%;
+  @include bp(max767){
+    width: 100%;
+  }
 }
 
 .panels {
@@ -1884,13 +1913,16 @@ label#three-tab {
 
 // retals page
 
-.retal_page {
-  .hero_retal {
+.rental__page {
+  .herobanner_rental {
     background-image: url(../image/banner-rentals3.jpg);
     border-radius: 0 0 5px 5px;
-
     background-size: cover;
     padding: 176px 93px 85px 93px;
+    
+    @include bp(max575){
+      padding: 50px;
+    }
 
     h1 {
       font-weight: 600;
@@ -1899,6 +1931,13 @@ label#three-tab {
       line-height: 70px;
       color: $light;
       margin-bottom: 73px;
+      @include bp(max767){
+        font-size: 55px;
+      }
+
+      @include bp(max575){
+        font-size: 26px;
+      }
     }
 
     p {
@@ -1917,10 +1956,15 @@ label#three-tab {
       margin-bottom: 150px;
       line-height: 46px;
       border-radius: 5px;
-
       &:hover {
         background-color: $light;
         color: $default;
+      }
+    }
+
+    .flex {
+      @include bp(max575) {
+        display: block;
       }
     }
   }
@@ -1947,14 +1991,116 @@ label#three-tab {
 
         font-size: 28px;
         line-height: 50px;
-        color: #1a2979;
+        color: $default;
         pointer-events: none;
         border-radius: 0 5px 5px 0;
         background: $light url(../image/icon-select-menu.svg) no-repeat center center;
       }
     }
   }
+
+  .tabs__layouts {
+    .tabs {
+      margin-bottom: 25px;
+    }
+  }
 }
+
+.panel {
+  .retals__box {
+    .rentals__box--items {
+      width: 32%;
+      padding: 65px 20px 30px;
+      background: #f2f2f2;
+      border-radius: 5px;
+      margin: 25px 0;
+      min-height: 425px;
+
+      @include bp(max767) {
+        width: 100%;
+      }
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      h6 {
+        color: $default;
+        font-weight: 600;
+        font-size: 35px;
+        letter-spacing: -0.02em;
+        margin-bottom: 70px;
+        @include bp(max575) {
+          font-size: 26px;
+        }
+      }
+
+      .rentals__box--btn {
+        flex-direction: column;
+        justify-content: center;
+
+        a {
+          width: 100%;
+          margin-bottom: 20px;
+          position: relative;
+          padding: 0 10px 0 16px;
+          text-align: center;
+          height: 50px;
+          line-height: 46px;
+          background: transparent;
+          border: 2px solid $default;
+          border-radius: 5px;
+          font-weight: 600;
+          padding: 0 20px;
+          height: 50px;
+          line-height: 46px;
+          min-width: 153px;
+          outline: none;
+          text-decoration: none;
+          text-align: center;
+          display: inline-block;
+
+          @include bp(max575) {
+            font-size: 14px;
+            padding: 0 5px;
+          }
+
+          &:hover {
+            background: $default;
+            border-color: $default;
+            color: $light;
+            text-decoration: none;
+
+            &:before {
+              filter: brightness(0) invert(1);
+            }
+          }
+
+          &:before {
+            content: '';
+            width: 30px;
+            height: 31px;
+            display: inline-block;
+            vertical-align: middle;
+            background: url(../image/post-link-icon.svg) no-repeat center center;
+            margin-right: 25px;
+          }
+
+          strong {
+            color: $light-green;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+//homepage
 
 .homepage__about {
   background-image: url(../image/RidderkerkNLTeam.png);
@@ -2482,5 +2628,141 @@ use {
 @keyframes a {
   to {
     stroke-dashoffset: 0px
+  }
+}
+
+
+
+// CONTACT US PAGE 
+
+.contact__us__banner {
+  background-image: url(../image/contactbanner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 175px 92px 100px 92px;
+  border-radius: 0;
+  min-height: 700px;
+
+  @include bp(max767) {
+    padding: 79px 0 0 27px;
+  }
+
+
+  h1 {
+    font-weight: 600;
+    font-size: 70px;
+    letter-spacing: -0.03em;
+    line-height: 70px;
+    color: $light;
+    margin-left: -6px;
+
+    @include bp(max479) {
+      font-size: 36px;
+    }
+  }
+}
+
+
+.contact__us__section {
+  justify-content: space-around;
+  margin-top: -350px;
+  align-items: inherit;
+
+  @include bp(max767) {
+    display: block;
+  }
+
+  .contact__us--address__section,
+  .contact__us--contact__section {
+    background-color: $backgroud-gray;
+    width: 45.81%;
+    min-height: 600px;
+    margin-bottom: 45px;
+
+    @include bp(max767) {
+      width: 100%;
+    }
+  }
+
+  .contact__us--address__section {
+    .flex {
+      align-items: inherit;
+      padding: 40px;
+
+      @include bp(max767) {
+        display: block;
+        text-align: center;
+        padding: 25px;
+      }
+
+
+      h3 {
+        color: $default;
+        font-weight: bold;
+        font-size: 33px;
+        letter-spacing: 0.05em;
+        line-height: 27px;
+
+        @include bp(max767) {
+          font-size: 26px;
+        }
+      }
+
+      p {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: 0.05em;
+        line-height: 27px;
+        color: $default;
+        padding: 0;
+
+        @include bp(max767) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .default_btn {
+      margin-bottom: 150px;
+      margin-top: 50px;
+    }
+
+    .default-btn {
+      width: 85%;
+      margin: 0 auto;
+      color: $default;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        background-color: $default;
+        color: $light;
+      }
+    }
+
+    .map__contact,
+    .mapouter,
+    .gmap_canvas {
+      width: 100%;
+    }
+  }
+
+  .contact__us--contact__section {
+    label {
+      display: block;
+    }
+
+    form {
+      padding: 40px;
+    }
+
+    select {
+      border: 0;
+      background: transparent;
+      outline: none;
+    }
+
   }
 }
