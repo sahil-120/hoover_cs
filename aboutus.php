@@ -10,7 +10,7 @@
     <?php include('./header_footer/link.php') ?>
 </head>
 
-<body>
+<body class="aboutus__page">
 <div id="overlayer"></div>
   <div class="preloader">
     <div class="loader">

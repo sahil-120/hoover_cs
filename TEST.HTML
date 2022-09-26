@@ -1,245 +1,166 @@
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-<!-- slider link  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
 	body {
-		background-color: #212121;
+		font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+		width: 300px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		height: 100vh;
 	}
 
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-	}
-
-	/* =Preloader */
-
-	#preloader {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		z-index: 101;
-		background-color: #212121;
-		color: #ffffff;
-	}
-
-	#preloader .txt {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-	}
-
-	#preloader .txt-perc {
-		font-size: 35px;
-		font-family: 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif;
-		opacity: 1;
-		margin: 0 0 6px 0;
-		max-width: 400px;
+	.Click-here {
+		cursor: pointer;
+		background-image: linear-gradient(190deg, #f83600 0%, #fee140 100%);
+		color: #fff;
+		width: 180px;
 		text-align: center;
+		font-size: 16px;
+		padding: 18px 0;
+		margin: 0 auto;
+		transition: background-image 3s ease-in-out;
 	}
 
-	#preloader .progress {
-		width: 100px;
-		height: 3px;
-		background-color: rgba(255, 255, 255, 0.2);
-		margin: 0 auto 15px auto;
+	.Click-here:hover {
+		transition: background-image 3s ease-in-out;
+		background-image: linear-gradient(90deg, #fee140 0%, #f83600 100%);
 	}
 
-	#preloader .progress span {
-		display: block;
-		width: 0;
-		height: 100%;
-		background-color: rgba(255, 255, 255, 0.8);
-	}
-
-	#preloader.is-hidden {
-		visibility: hidden;
+	.custom-model-main {
+		text-align: center;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		/* z-index: 1050; */
+		-webkit-overflow-scrolling: touch;
+		outline: 0;
 		opacity: 0;
+		-webkit-transition: opacity 0.15s linear, z-index 0.15;
+		-o-transition: opacity 0.15s linear, z-index 0.15;
+		transition: opacity 0.15s linear, z-index 0.15;
+		z-index: -1;
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 
-	.is-loading {
+	.model-open {
+		z-index: 99999;
+		opacity: 1;
 		overflow: hidden;
 	}
 
+	.custom-model-inner {
+		-webkit-transform: translate(0, -25%);
+		-ms-transform: translate(0, -25%);
+		transform: translate(0, -25%);
+		-webkit-transition: -webkit-transform 0.3s ease-out;
+		-o-transition: -o-transform 0.3s ease-out;
+		transition: -webkit-transform 0.3s ease-out;
+		-o-transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		display: inline-block;
+		vertical-align: middle;
+		width: 600px;
+		margin: 30px auto;
+		max-width: 97%;
+	}
 
-	.bcg {
+	.custom-model-wrap {
+		display: block;
+		width: 100%;
+		position: relative;
+		background-color: #fff;
+		border: 1px solid #999;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: 6px;
+		-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+		background-clip: padding-box;
+		outline: 0;
+		text-align: left;
+		padding: 20px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		max-height: calc(100vh - 70px);
+		overflow-y: auto;
+	}
+
+	.model-open .custom-model-inner {
+		-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		transform: translate(0, 0);
+		position: relative;
+		z-index: 999;
+	}
+
+	.model-open .bg-overlay {
+		background: rgba(0, 0, 0, 0.6);
+		z-index: 99;
+	}
+
+	.bg-overlay {
+		background: rgba(0, 0, 0, 0);
+		height: 100vh;
+		width: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+	}
+
+	.close-btn {
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-		opacity: 1;
+		right: 0;
+		top: -30px;
+		cursor: pointer;
+		z-index: 99;
+		font-size: 30px;
+		color: #fff;
 	}
 
-	.loading-main {
-		width: 100%;
-		height: calc(100vh - 128px);
-		background: rgb(243, 243, 243);
-		display: grid;
-		place-content: center;
-	}
-
-	.spinner {
-		flex-direction: row;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.dot1,
-	.dot2,
-	.dot3 {
-		width: 15px;
-		height: 15px;
-		border-color: rgb(255, 0, 0);
-		border-radius: 50%;
-		margin: 10px;
-	}
-
-	.dot1 {
-		animation: jump765 1.6s -0.32s linear infinite;
-		background: rgb(255, 0, 149);
-	}
-
-	.dot2 {
-		animation: jump765 1.6s -0.16s linear infinite;
-		background: rgb(6, 255, 255);
-	}
-
-	.dot3 {
-		animation: jump765 1.6s linear infinite;
-		background: rgb(0, 0, 0);
-	}
-
-	@keyframes jump765 {
-
-		0%,
-		80%,
-		100% {
-			-webkit-transform: scale(0);
-			transform: scale(0);
+	@media screen and (min-width:800px) {
+		.custom-model-main:before {
+			content: "";
+			display: inline-block;
+			height: auto;
+			vertical-align: middle;
+			margin-right: -0px;
+			height: 100%;
 		}
+	}
 
-		40% {
-			-webkit-transform: scale(2.0);
-			transform: scale(2.0);
+	@media screen and (max-width:799px) {
+		.custom-model-inner {
+			margin-top: 45px;
 		}
 	}
 </style>
-<div id="preloader">
-	<div className="loading-main">
-		<div class="spinner">
-			<div class="dot1"></div>
-			<div class="dot2"></div>
-			<div class="dot3"></div>
+<div class="Click-here">Click Here</div>
+<div class="custom-model-main">
+	<div class="custom-model-inner">
+		<div class="close-btn">×</div>
+		<div class="custom-model-wrap">
+			<div class="pop-up-content-wrap">
+				Content Here
+			</div>
 		</div>
 	</div>
+	<div class="bg-overlay"></div>
 </div>
-<div id="intro" class="header-container fs">
-	<div class="bcg">
-		<img src="https://ihatetomatoes.net/demos/scrollmagic-templates/scrollmagic-template-04/img/img_mountains01.jpg"
-			alt="">
-	</div>
-
-</div>
-
-
 
 <script>
-	(function (jQuery) {
-		// number of loaded images for preloader progress 
-		var loadedCount = 0; //current number of images loaded
-		var imagesToLoad = jQuery('.bcg').length; //number of slides with .bcg container
-		var loadingProgress = 0; //timeline progress - starts at 0
+	$(".Click-here").on('click', function () {
+		$(".custom-model-main").addClass('model-open');
+	});
+	$(".close-btn, .bg-overlay").click(function () {
+		$(".custom-model-main").removeClass('model-open');
+	});
 
-		jQuery('.bcg').imagesLoaded({
-			background: true
-		}).progress(function (instance, image) {
-			loadProgress();
-		});
-
-		function loadProgress(imgLoad, image) {
-			//one more image has been loaded
-			loadedCount++;
-
-			loadingProgress = (loadedCount / imagesToLoad);
-
-			// GSAP timeline for our progress bar
-			TweenLite.to(progressTl, 0.7, {
-				progress: loadingProgress,
-				ease: Linear.easeNone
-			});
-
-		}
-
-
-		var progressTl = new TimelineMax({
-			paused: true,
-			onUpdate: progressUpdate,
-			onComplete: loadComplete
-		});
-
-		progressTl
-			//tween the progress bar width
-			.to(jQuery('.progress span'), 1, {
-				width: 100,
-				ease: Linear.easeNone
-			});
-
-		//as the progress bar witdh updates and grows we put the precentage loaded in the screen
-		function progressUpdate() {
-			//the percentage loaded based on the tween's progress
-			loadingProgress = Math.round(progressTl.progress() * 100);
-			//we put the percentage in the screen
-			jQuery(".txt-perc").text(loadingProgress + '%');
-
-		}
-
-		function loadComplete() {
-
-			// preloader out
-			var preloaderOutTl = new TimelineMax();
-
-			preloaderOutTl
-				.to(jQuery('.progress'), 0.3, {
-					y: 100,
-					autoAlpha: 0,
-					ease: Back.easeIn
-				})
-				.to(jQuery('.txt-perc'), 0.3, {
-					y: 100,
-					autoAlpha: 0,
-					ease: Back.easeIn
-				}, 0.1)
-				.set(jQuery('body'), {
-					className: '-=is-loading'
-				})
-				.set(jQuery('#intro'), {
-					className: '+=is-loaded'
-				})
-				.to(jQuery('#preloader'), 0.7, {
-					yPercent: 100,
-					ease: Power4.easeInOut
-				})
-				.set(jQuery('#preloader'), {
-					className: '+=is-hidden'
-				});
-
-			return preloaderOutTl;
-		}
-
-		var introTl = new TimelineMax();
-
-		introTl
-			.to(Jquery('#intro'), 0.7, {
-				autoAlpha: 0.5,
-				ease: Power1.easeNone
-			}, 0);
-
-
-	}(jQuery));
 </script>

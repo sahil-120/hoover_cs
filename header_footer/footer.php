@@ -18,6 +18,7 @@
                         <li><a class="title_ql" href="#">Why Hoover CS</a></li>
                         <li><a href="#">Sustainability</a></li>
                         <li><a href="#">Goal ZERO & Safety</a></li>
+                        <li><a href="./whyrent.php">Why rent</a></li>
                     </ul>
                 </div>
 
