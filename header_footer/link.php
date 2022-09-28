@@ -1,5 +1,5 @@
   <!-- css linking -->
-  <link rel="stylesheet" href="./sass/style.css" />
+  <link rel="stylesheet" href="./sass/oldstyle.css" />
   <!-- jquery linking  -->
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>

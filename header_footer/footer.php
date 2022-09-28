@@ -15,12 +15,13 @@
                 </div>
                 <div class="why_hover ql_footer">
                     <ul>
-                        <li><a class="title_ql" href="#">Why Hoover CS</a></li>
+                        <li><a class="title_ql" href="./whyhoovercs.php">Why Hoover CS</a></li>
                         <li><a href="#">Sustainability</a></li>
                         <li><a href="#">Goal ZERO & Safety</a></li>
                         <li><a href="./whyrent.php">Why rent</a></li>
                     </ul>
                 </div>
+
 
                 <div class="about ql_footer">
                     <ul>
@@ -31,6 +32,7 @@
                         <li><a href="#">Metric Calculator</a></li>
                     </ul>
                 </div>
+
 
                 <div class="about ql_footer">
                     <ul>
@@ -58,9 +60,11 @@
             <div class="copyright f-link">
                 <p>© Hoover CS</p>
             </div>
+
             <div class="policy f-link">
                 <a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Credits</a>
             </div>
+            
             <div class="developer f-link">
                 <a href="">Web Design by OWDT</a>
             </div>
