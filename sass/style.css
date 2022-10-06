@@ -291,7 +291,6 @@ select option {
   margin-right: 25px;
   border: 2px solid;
   border-radius: 5px;
-  border: 2px solid #fff;
   font-size: 16px;
   font-weight: 600;
   padding: 0 20px;
@@ -2609,6 +2608,10 @@ h1 {
     margin-bottom: 15px;
   }
 }
+.service__page .service__banner .flex .banner__title p .green_link,
+.service__page .service__banner .flex .banner_descr p .green_link {
+  color: #74bc1f;
+}
 .service__page .service__banner .flex .banner__title a,
 .service__page .service__banner .flex .banner_descr a {
   color: #fff;
@@ -2689,297 +2692,208 @@ h1 {
   padding: 50px 25px;
 }
 
-.why-rent__page .why-rent__banner {
-  background: url(../image/banner-rentals-dark.jpg);
+.faq__page .faq__herobanner {
+  background: linear-gradient(90deg, #3549b2 0%, #13216a 100%);
+  padding: 176px 92px 85px 92px;
+  height: 701px;
+}
+.faq__page .faq__herobanner h1 {
+  font-size: 70px;
+}
+.faq__page .faq__herobanner .faq_select p {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.faq__page .faq__item__title {
+  display: block;
+  padding: 20px;
+  cursor: pointer;
+  background: #eee;
+  color: #333;
+  position: relative;
+}
+.faq__page .faq__item__title:after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: -1rem;
+  font-weight: bold;
+}
+.faq__page .faq__item:nth-of-type(2n) .faq__page .faq__item__title {
+  background: #ddd;
+}
+.faq__page .faq__item__content {
+  display: none;
+  padding: 20px;
+}
+.faq__page .faq__item__content:target {
+  display: block;
+}
+
+.ourculture__page .ourculture__banner {
+  background: url(../image/banner-ourculture3.jpg);
+  padding: 91px 92px 106px 92px;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 174px 92px 208px 92px;
+  min-height: 790px;
+  margin-bottom: 150px;
 }
-@media all and (max-width: 767px) {
-  .why-rent__page .why-rent__banner {
-    padding: 80px 0;
+@media all and (max-width: 575px) {
+  .ourculture__page .ourculture__banner {
+    margin-bottom: 50px;
+    min-height: auto;
+    padding: 75px 25px;
   }
 }
-.why-rent__page .why-rent__banner .flex {
-  align-items: inherit;
+.ourculture__page .ourculture__banner p {
+  font-size: 17px;
+  max-width: 675px;
+  padding-top: 150px;
 }
 @media all and (max-width: 767px) {
-  .why-rent__page .why-rent__banner .flex {
-    display: block;
-  }
-}
-.why-rent__page .why-rent__banner .flex .banner__title,
-.why-rent__page .why-rent__banner .flex .banner_descr {
-  width: 50%;
-}
-@media all and (max-width: 767px) {
-  .why-rent__page .why-rent__banner .flex .banner__title,
-.why-rent__page .why-rent__banner .flex .banner_descr {
+  .ourculture__page .ourculture__banner p {
     width: 100%;
   }
 }
-.why-rent__page .why-rent__banner .flex .banner__title h1,
-.why-rent__page .why-rent__banner .flex .banner__title p,
-.why-rent__page .why-rent__banner .flex .banner_descr h1,
-.why-rent__page .why-rent__banner .flex .banner_descr p {
-  color: #fff;
-}
-.why-rent__page .why-rent__banner .flex .banner__title h1,
-.why-rent__page .why-rent__banner .flex .banner_descr h1 {
-  font-size: 65px;
-}
-@media all and (max-width: 767px) {
-  .why-rent__page .why-rent__banner .flex .banner__title h1,
-.why-rent__page .why-rent__banner .flex .banner_descr h1 {
-    margin-bottom: 15px;
+@media all and (max-width: 575px) {
+  .ourculture__page .ourculture__banner p {
+    padding-top: 25px;
   }
 }
-.why-rent__page .why-rent__banner .flex .banner__title a,
-.why-rent__page .why-rent__banner .flex .banner_descr a {
-  color: #fff;
-}
-.why-rent__page .why-rent__banner .flex .banner__title a:hover,
-.why-rent__page .why-rent__banner .flex .banner_descr a:hover {
-  text-decoration: underline;
-}
-.why-rent__page .rent__boxes {
-  margin-top: -150px;
-  padding: 0 60px;
-  line-height: normal;
-  margin-bottom: 100px;
-}
-.why-rent__page .rent__boxes .rent__boxes--items {
-  background: linear-gradient(145deg, #3549b2 0%, #13216a 100%);
-  width: 25%;
+.ourculture__page .flex {
   align-items: inherit;
-  min-height: 330px;
-  padding: 44px 25px 40px 30px;
-  width: calc((100% - 100px) / 4);
+}
+.ourculture__page .flex.items .item {
+  width: calc((100% - 90px) / 3);
+  padding: 148px 55px 100px;
   border-radius: 5px;
+  background: #e6f2ff;
+  min-height: 450px;
 }
-.why-rent__page .rent__boxes .rent__boxes--items h3 {
-  font-size: 26px;
-  line-height: 32px;
-  padding: 0;
+@media all and (max-width: 767px) {
+  .ourculture__page .flex.items .item {
+    padding: 100px 55px 50px;
+  }
 }
-.why-rent__page .rent__boxes .rent__boxes--items p {
-  margin-top: 40px;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.3;
+@media all and (max-width: 767px) {
+  .ourculture__page .flex.items .item {
+    width: calc((100% - 45px) / 2);
+    margin: 10px;
+  }
 }
-.why-rent__page .rent__boxes .rent__boxes--items:hover {
-  background: #fff;
-  border: 1px solid #13216a;
+@media all and (max-width: 575px) {
+  .ourculture__page .flex.items .item {
+    width: 100%;
+  }
 }
-.why-rent__page .rent__boxes .rent__boxes--items:hover h3,
-.why-rent__page .rent__boxes .rent__boxes--items:hover p {
-  color: #13216a;
-}
-.why-rent__page .why-rent__description {
-  max-width: 875px;
-  margin: 0 auto;
-}
-.why-rent__page .why-rent__description p:first-child {
-  font-size: 14px;
-}
-.why-rent__page .why-rent__description h2 {
-  font-size: 38px;
-  line-height: 50px;
-  color: #13216a;
-  margin-bottom: 26px;
-}
-.why-rent__page .why-rent__description .why-rent__description--btn {
+.ourculture__page .flex.items .item .icon__image {
   display: flex;
   justify-content: center;
-  margin: 50px 0 115px;
+  margin-bottom: 15px;
 }
-.why-rent__page .why-rent__bins {
-  align-items: inherit;
+.ourculture__page .flex.items .item h3,
+.ourculture__page .flex.items .item p {
+  text-align: center;
 }
-.why-rent__page .why-rent__bins .item {
-  width: 30%;
+.ourculture__page .flex.items .item h3 {
+  color: #13216a;
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
-.why-rent__page .why-rent__bins .item img {
-  width: 100%;
-  max-height: 450px;
-}
-.why-rent__page .why-rent__bins .item .why-rent__bins--btn {
-  display: flex;
-  justify-content: space-around;
-  margin: 0 27px;
-  position: absolute;
-  grid-gap: 5px;
-  bottom: 40px;
-}
-@media all and (max-width: 1365px) {
-  .why-rent__page .why-rent__bins .item .why-rent__bins--btn {
-    display: block;
-  }
-}
-@media all and (max-width: 1365px) {
-  .why-rent__page .why-rent__bins .item .why-rent__bins--btn a {
-    display: flex;
-    justify-content: center;
-  }
-}
-.why-rent__page .why-rent__bins .item .bg_why-rent {
-  background: linear-gradient(145deg, #3549b2 0%, #13216a 100%);
-  margin-top: -100px;
-  min-height: 450px;
-  position: relative;
-}
-.why-rent__page .why-rent__bins .item h4,
-.why-rent__page .why-rent__bins .item p {
-  color: #fff;
-}
-.why-rent__page .why-rent__bins .item h4 {
-  font-size: 33px;
-  line-height: 39px;
-  letter-spacing: -0.02em;
-  margin-bottom: 31px;
-  padding: 63px 30px 0;
-}
-.why-rent__page .why-rent__bins .item p {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  padding: 0 25px 30px;
-}
-
-.why-hoover-cs__page .why-hoover-cs__banner {
-  background: url(../image/banner-why-hoover-sk.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 174px 92px 208px 92px;
+.ourculture__page .flex.items .item p {
+  font-size: 27px;
+  line-height: 37px;
 }
 @media all and (max-width: 767px) {
-  .why-hoover-cs__page .why-hoover-cs__banner {
-    padding: 80px 0;
+  .ourculture__page .flex.items .item p {
+    font-size: 24px;
+    line-height: normal;
   }
 }
-.why-hoover-cs__page .why-hoover-cs__banner .flex {
-  align-items: inherit;
-}
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner__title img {
-  width: 400px;
+.ourculture__page .communication__section {
+  margin-top: 150px;
+  margin-bottom: 100px;
 }
 @media all and (max-width: 767px) {
-  .why-hoover-cs__page .why-hoover-cs__banner .flex {
-    display: block;
+  .ourculture__page .communication__section {
+    max-width: 100%;
   }
 }
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner__title,
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner_descr {
-  width: 50%;
+.ourculture__page .communication__section h2 {
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: -0.03em;
+  line-height: 50px;
+  color: #13216a;
+  text-align: center;
+}
+.ourculture__page .communication__section p {
+  width: 768px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #13216a;
+  margin: 0 auto;
+  margin-top: 33px;
+  text-align: center;
+  padding: 0;
 }
 @media all and (max-width: 767px) {
-  .why-hoover-cs__page .why-hoover-cs__banner .flex .banner__title,
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner_descr {
+  .ourculture__page .communication__section p {
     width: 100%;
   }
 }
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner__title h1,
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner__title p,
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner_descr h1,
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner_descr p {
-  color: #fff;
-  padding: 0;
+.ourculture__page .mw628 {
+  margin: 0 auto;
 }
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner__title h1,
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner_descr h1 {
-  font-size: 65px;
+.ourculture__page .mw628 p {
+  width: 100%;
 }
-@media all and (max-width: 767px) {
-  .why-hoover-cs__page .why-hoover-cs__banner .flex .banner__title h1,
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner_descr h1 {
-    margin-bottom: 15px;
+.ourculture__page .mw628 p:last-child {
+  margin-bottom: 50px;
+}
+.ourculture__page .slider__ourculture {
+  margin-bottom: 150px;
+}
+@media all and (max-width: 575px) {
+  .ourculture__page .slider__ourculture {
+    margin-bottom: 50px;
   }
 }
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner__title a,
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner_descr a {
-  color: #fff;
+.ourculture__page .slider__ourculture .slider_wrapper {
+  width: calc((100% - 50px) / 2);
 }
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner__title a:hover,
-.why-hoover-cs__page .why-hoover-cs__banner .flex .banner_descr a:hover {
-  text-decoration: underline;
+@media all and (max-width: 575px) {
+  .ourculture__page .slider__ourculture .slider_wrapper {
+    width: 100%;
+  }
 }
-.why-hoover-cs__page .why-hoovercs__description {
-  max-width: 875px;
-  margin: 0 auto;
-  margin-top: 40px;
-}
-.why-hoover-cs__page .why-hoovercs__description p:first-child {
-  font-size: 14px;
-}
-.why-hoover-cs__page .why-hoovercs__description h2 {
-  font-size: 38px;
-  line-height: 50px;
-  color: #13216a;
-  margin-bottom: 26px;
-}
-.why-hoover-cs__page .why-hoovercs__description .why-hoovercs__description {
-  font-weight: 600;
-  font-size: 20px;
-  margin: 50px 0 115px;
-}
-
-h3 {
-  margin-bottom: 18px;
-  letter-spacing: inherit;
-  font-size: 38px;
-  line-height: 50px;
-}
-h3 .x {
-  color: #74BC1F;
-  font-weight: 700;
-}
-
-.score-value-boxes {
-  margin-top: 35px;
-  display: inline-block;
+.ourculture__page .slider__ourculture .slider_wrapper .flex {
   width: 100%;
-  position: relative;
 }
-.score-value-boxes .score-caption.left-label {
-  padding-right: 14px;
+.ourculture__page .slider__ourculture .slider_wrapper .flex .thum-img {
+  width: 100%;
 }
-.score-value-boxes .score-caption.left-label span {
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 26px;
-  color: #000;
-  opacity: 0.41;
-  text-transform: uppercase;
-  display: inline-block;
+.ourculture__page .slider__ourculture .slider_wrapper .flex .thum-img img {
+  width: 100%;
 }
-.score-value-boxes .score-caption.left-label h4 {
+.ourculture__page .slider__ourculture .slider_wrapper .txt h4 {
   font-weight: 600;
-  font-size: 25px;
-  letter-spacing: -0.02em;
-  margin-bottom: 26px;
-}
-.score-value-boxes .score-caption.left-label p {
-  font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 25px;
-}
-.score-value-boxes .score-bar {
-  width: 56%;
-  display: inline-block;
-  position: absolute;
-  max-width: 708px;
-  width: 58%;
-  left: 10%;
-  top: 30px;
-}
-.score-value-boxes input.range-slider {
-  width: 100%;
-  border-radius: 10px;
-  height: 3px;
+  color: #000;
+  opacity: 0.5;
   margin: 0;
-  background: #13216a;
-  outline: none;
-  box-shadow: none;
-  transition: opacity 0.2s;
+}
+.ourculture__page .slider__ourculture .slider_wrapper .txt p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #000;
+  opacity: 0.5;
 }/*# sourceMappingURL=style.css.map */

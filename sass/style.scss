@@ -3117,3 +3117,240 @@ h1 {
     }
   }
 }
+
+
+// faq page css 
+
+.faq__page {
+  .faq__herobanner {
+    background: linear-gradient(90deg, #3549b2 0%, #13216a 100%);
+    padding: 176px 92px 85px 92px;
+    height: 701px;
+
+    h1 {
+      font-size: 70px;
+    }
+
+    .faq_select {
+      p {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 600;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .faq__item {
+    &__title {
+      display: block;
+      padding: 20px;
+      cursor: pointer;
+      background: #eee;
+      color: #333;
+      position: relative;
+
+      &:after {
+        content: '+';
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-top: -1rem;
+        font-weight: bold;
+      }
+    }
+
+    &:nth-of-type(2n) &__title {
+      background: #ddd;
+    }
+
+    &__content {
+      display: none;
+      padding: 20px;
+
+      &:target {
+        display: block;
+      }
+    }
+  }
+}
+
+
+// our culture
+.ourculture__page {
+  .ourculture__banner {
+    background: url(../image/banner-ourculture3.jpg);
+    padding: 91px 92px 106px 92px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 790px;
+    margin-bottom: 150px;
+
+    @include bp(max575) {
+      margin-bottom: 50px;
+      min-height: auto;
+      padding: 75px 25px;
+    }
+
+    p {
+      font-size: 17px;
+      max-width: 675px;
+      padding-top: 150px;
+
+      @include bp(max767) {
+        width: 100%;
+      }
+      @include bp(max575) {
+        padding-top:25px;
+      }
+    }
+  }
+
+  .flex {
+    align-items: inherit;
+
+    &.items {
+      .item {
+        width: calc((100% - 90px) / 3);
+        padding: 148px 55px 100px;
+        border-radius: 5px;
+        background: #e6f2ff;
+        min-height: 450px;
+
+        @include bp(max767) {
+          padding: 100px 55px 50px;
+        }
+
+        @include bp(max767) {
+          width: calc((100% - 45px) / 2);
+          margin: 10px;
+        }
+
+        @include bp(max575) {
+          width: 100%;
+        }
+
+        .icon__image {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 15px;
+        }
+
+        h3,
+        p {
+          text-align: center;
+        }
+
+        h3 {
+          color: $default;
+          font-size: 38px;
+          font-weight: bold;
+          margin-bottom: 40px;
+        }
+
+        p {
+          font-size: 27px;
+          line-height: 37px;
+
+          @include bp(max767) {
+            font-size: 24px;
+            line-height: normal;
+          }
+
+        }
+      }
+    }
+  }
+
+  .communication__section {
+    margin-top: 150px;
+    margin-bottom: 100px;
+
+    @include bp(max767) {
+      max-width: 100%;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 38px;
+      letter-spacing: -0.03em;
+      line-height: 50px;
+      color: $default;
+      text-align: center;
+    }
+
+    p {
+      width: 768px;
+      font-size: 18px;
+      line-height: 30px;
+      color: $default;
+      margin: 0 auto;
+      margin-top: 33px;
+      text-align: center;
+      padding: 0;
+
+      @include bp(max767) {
+        width: 100%;
+      }
+    }
+  }
+
+  .mw628 {
+    margin: 0 auto;
+    p{
+      width: 100%;
+      &:last-child{
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .slider__ourculture {
+    margin-bottom: 150px;
+
+    @include bp(max575) {
+      margin-bottom: 50px;
+    }
+
+    .slider_wrapper {
+      width: calc((100% - 50px) /2);
+
+      @include bp(max575) {
+        width: 100%;
+      }
+
+      .flex {
+        width: 100%;
+
+        .thum-img {
+          width: 100%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .txt {
+        h4 {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 25px;
+          color: #000;
+          opacity: 0.5;
+          margin: 0;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+          color: #000;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

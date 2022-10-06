@@ -1,169 +1,115 @@
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-:root {
-  --Cultured: #F3F3F4;
-
-  --RaisinBlack01:#1A1C26;
-  --RaisinBlack02:#262835;
-  --BabyBlue: #66C7F1;
-  --Cinnabar: #E24328;
-
-  --Poppins: 'Poppins', sans-serif;
+	body {
+	 color: #2c3e50;
+	 background: #ecf0f1;
+	 padding: 0 1em 1em;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ h1 {
+	 margin: 0;
+	 line-height: 2;
+	 text-align: center;
 }
-
-body {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--Poppins);
-  color: var(--Cultured);
-  background-color: var(--RaisinBlack01);
+ h2 {
+	 margin: 0 0 0.5em;
+	 font-weight: normal;
 }
-
-.input {
-  width: 172px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
+ input {
+	 position: absolute;
+	 opacity: 0;
+	 z-index: -1;
 }
-
-.input span.value {
-  font-size: 16px;
+ .row {
+	 display: flex;
 }
-
-/* Styling the sliders*/
-input[type="range"] {
-	-webkit-appearance: none;
-	background: transparent;
+ .row .col {
+	 flex: 1;
 }
-input[type="range"]::-webkit-slider-thumb {
-	-webkit-appearance: none;
+ .row .col:last-child {
+	 margin-left: 1em;
 }
-input[type="range"]:focus {
-	outline: none;
+/* Accordion styles */
+ .tabs {
+	 border-radius: 8px;
+	 overflow: hidden;
+	 box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
-input[type="range"]::-ms-track {
-	cursor: pointer;
-	background: transparent;
-	border-color: transparent;
-	color: transparent;
+ .tab {
+	 width: 100%;
+	 color: white;
+	 overflow: hidden;
 }
-
-/*New range styles*/
-input[type="range"]::-webkit-slider-runnable-track {
-	height: 8px;
-	cursor: pointer;
-  background-color: var(--RaisinBlack02);
-  border-radius: 50px;
+ .tab-label {
+	 display: flex;
+	 justify-content: space-between;
+	 padding: 1em;
+	 background: #2c3e50;
+	 font-weight: bold;
+	 cursor: pointer;
+	/* Icon */
 }
-
-input[type="range"]::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	height: 13px;
-	width: 13px;
-	margin-top: -3px;
-	background-color: var(--BabyBlue);
-  box-shadow: 0 0 0 6px #e2442865;
-	border-radius: 10px;
-	cursor: pointer;
-  will-change: contents;
-  transition: all 0.2s ease;
+ .tab-label:hover {
+	 background: #1a252f;
 }
-
-/* input[type="range"]:focus::-webkit-slider-runnable-track {
-	box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
-} */
-
-/* input[type="range"]:focus::-webkit-slider-thumb {
-	box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
-} */
-
-input[type="range"]::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 0 8px #e2442879;
+ .tab-label::after {
+	 content: "\276F";
+	 width: 1em;
+	 height: 1em;
+	 text-align: center;
+	 transition: all 0.35s;
 }
-
-input[type="range"]::-moz-range-track {
-	width: 100%;
-	height: 8px;
-	cursor: pointer;
-  background-color: var(--RaisinBlack02);
-  border-radius: 50px;
+ .tab-content {
+	 max-height: 0;
+	 padding: 0 1em;
+	 color: #2c3e50;
+	 background: white;
+	 transition: all 0.35s;
 }
-input[type="range"]::-moz-range-thumb {
-	-webkit-appearance: none;
-	height: 13px;
-	width: 13px;
-	margin-top: -3px;
-	background-color: var(--BabyBlue);
-  box-shadow: 0 0 0 6px #e2442865;
-	border-radius: 20px;
-	cursor: pointer;
-  will-change: contents;
-  transition: all 0.2s ease;
+ .tab-close {
+	 display: flex;
+	 justify-content: flex-end;
+	 padding: 1em;
+	 font-size: 0.75em;
+	 background: #2c3e50;
+	 cursor: pointer;
 }
-
-/* input[type="range"]:focus::-moz-range-track {
-	box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+ .tab-close:hover {
+	 background: #1a252f;
 }
-
-input[type="range"]:focus::-moz-range-thumb {
-	box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
-} */
-
-input[type="range"]::-moz-range-thumb:hover {
-  box-shadow: 0 0 0 8px #e2442879;
+ input:checked + .tab-label {
+	 background: #1a252f;
 }
-
-input[type="range"]::-ms-track {
-	width: 100%;
-	height: 2px;
-	cursor: pointer;
-	background: #fff;
+ input:checked + .tab-label::after {
+	 transform: rotate(90deg);
 }
-
-input[type="range"]::-ms-thumb {
-	height: 20px;
-	width: 20px;
-	border-radius: 20px;
-	background: #ffffff;
-	cursor: pointer;
-	-webkit-appearance: none;
-	margin-top: 0px;
+ input:checked ~ .tab-content {
+	 max-height: 100vh;
+	 padding: 1em;
 }
-
-input[type="range"]:focus::-ms-fill-lower {
-	box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.4);
-}
-input[type="range"]:focus::-ms-fill-upper {
-	box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.4);
-}
+ 
 </style>
-<div class="input">
-	<input type="range" name="" id="input" min="0" max="100" value="70">
-	<span class="value"></span>
+<h1>Pure CSS Accordion </h1>
+<div class="row">
+  <div class="col">
+    <h2>Open <b>one</b></h2>
+    <div class="tabs">
+      <div class="tab">
+        <input type="radio" id="rd1" name="rd">
+        <label class="tab-label" for="rd1">Item 1</label>
+        <div class="tab-content">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+        </div>
+      </div>
+      <div class="tab">
+        <input type="radio" id="rd2" name="rd">
+        <label class="tab-label" for="rd2">Item 2</label>
+        <div class="tab-content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+        </div>
+      </div>
+      <div class="tab">
+        <input type="radio" id="rd3" name="rd">
+        <label for="rd3" class="tab-close">Close others &times;</label>
+      </div>
+    </div>
+  </div>
 </div>
-
-<script>
-let defaultValue = 70
-
-const input = document.getElementById("input")
-const value = document.querySelector(".value")
-
-value.innerHTML = defaultValue 
-
-input.addEventListener("input", () => {
-  value.innerHTML = input.value 
-})
-
-</script>

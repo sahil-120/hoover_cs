@@ -8,7 +8,7 @@
                 <div class="about ql_footer">
                     <ul>
                         <li><a class="title_ql" href="./aboutus.php">About</a></li>
-                        <li><a href="#">Our Culture</a></li>
+                        <li><a href="./ourculture.php">Our Culture</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">News & Announcement</a></li>
                     </ul>
@@ -28,7 +28,7 @@
                         <li><a class="title_ql" href="#">Resource Center</a></li>
                         <li><a href="#">Reference Materials</a></li>
                         <li><a href="#">Strapping Charts</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="./faq.php">FAQ</a></li>
                         <li><a href="#">Metric Calculator</a></li>
                     </ul>
                 </div>
