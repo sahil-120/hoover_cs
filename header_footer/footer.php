@@ -16,8 +16,8 @@
                 <div class="why_hover ql_footer">
                     <ul>
                         <li><a class="title_ql" href="./whyhoovercs.php">Why Hoover CS</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                        <li><a href="#">Goal ZERO & Safety</a></li>
+                        <li><a href="./sustainability.php">Sustainability</a></li>
+                        <li><a href="./goalzero.php">Goal ZERO & Safety</a></li>
                         <li><a href="./whyrent.php">Why rent</a></li>
                     </ul>
                 </div>

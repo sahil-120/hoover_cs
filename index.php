@@ -28,14 +28,16 @@
         <div class="homepage__banner-left-content">
           <div class="homepage-banner__select-option">
             <p class="text-light">What can we help you with?</p>
-            <select>
-              <option>Select one</option>
-              <option value="/ind.html">Why Choose Hoover CS</option>
-              <option value="#">Rent IBCs</option>
-              <option value="#">Rent Catalyst Bins</option>
-              <option value="#">Rent ISOs</option>
-              <option value="#">Learn About Our Reusable Packaging</option>
-            </select>
+            <div class="optionbox-otr">
+              <select>
+                <option>Select one</option>
+                <option value="/ind.html">Why Choose Hoover CS</option>
+                <option value="#">Rent IBCs</option>
+                <option value="#">Rent Catalyst Bins</option>
+                <option value="#">Rent ISOs</option>
+                <option value="#">Learn About Our Reusable Packaging</option>
+              </select>
+            </div>
 
           </div>
           <p class="homepage-banner__btn flex">

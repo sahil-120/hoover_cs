@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="74" height="777" viewBox="0 0 74 777">
+  <g id="Group_451" data-name="Group 451" transform="translate(-918 -3322.537)">
+    <g id="Ellipse_149" data-name="Ellipse 149" transform="translate(918 3681.037)" fill="#fff" stroke="#182162" stroke-width="2">
+      <circle cx="37" cy="37" r="37" stroke="none"/>
+      <circle cx="37" cy="37" r="36" fill="none"/>
+    </g>
+    <line id="Line_431" data-name="Line 431" y2="777" transform="translate(955.5 3322.537)" fill="none" stroke="#fff" stroke-width="5"/>
+    <g id="Group_418" data-name="Group 418" transform="translate(962.489 3713.03)">
+      <line id="Line_39" data-name="Line 39" y1="5.007" x2="5.007" transform="translate(10.014 5.007)" fill="none" stroke="#162166" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_40" data-name="Line 40" x2="5.007" y2="5.007" transform="translate(10.014 0)" fill="none" stroke="#162166" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_419" data-name="Group 419" transform="translate(950.014 3723.044) rotate(180)">
+      <line id="Line_39-2" data-name="Line 39" y1="5.007" x2="5.007" transform="translate(10.014 5.007)" fill="none" stroke="#162166" stroke-linecap="round" stroke-width="2"/>
+      <line id="Line_40-2" data-name="Line 40" x2="5.007" y2="5.007" transform="translate(10.014 0)" fill="none" stroke="#162166" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <line id="Line_428" data-name="Line 428" y2="17" transform="translate(955.5 3709.537)" fill="none" stroke="#162166" stroke-linecap="round" stroke-width="2"/>
+    <line id="Line_429" data-name="Line 429" y2="10.014" transform="translate(959.5 3713.03)" fill="none" stroke="#162166" stroke-linecap="round" stroke-width="2"/>
+    <line id="Line_430" data-name="Line 430" y2="10.014" transform="translate(951 3713.03)" fill="none" stroke="#162166" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>
